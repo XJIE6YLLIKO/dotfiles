@@ -54,7 +54,7 @@
       };
 
       dwindle = {
-        no_gaps_when_only = true;
+        # no_gaps_when_only = true;
         force_split = 0;
         special_scale_factor = 1.0;
         split_width_multiplier = 1.0;
@@ -66,7 +66,7 @@
       master = {
         new_status = "master";
         special_scale_factor = 1;
-        no_gaps_when_only = false;
+        # no_gaps_when_only = false;
       };
 
       decoration = {
@@ -134,7 +134,7 @@
         "$mainMod, Return, exec, kitty"
         "ALT, Return, exec, kitty --title float_kitty"
         "$mainMod SHIFT, Return, exec, kitty --start-as=fullscreen -o 'font_size=16'"
-        "$mainMod, B, exec, hyprctl dispatch exec '[workspace 1 silent] floorp'"
+        "$mainMod, B, exec, zen"
         "$mainMod, Q, killactive,"
         "$mainMod, F, fullscreen, 0"
         "$mainMod SHIFT, F, fullscreen, 1"
@@ -145,7 +145,7 @@
         "$mainMod, Escape, exec, swaylock"
         "$mainMod SHIFT, Escape, exec, shutdown-script"
         "$mainMod, P, pseudo,"
-        "$mainMod, J, togglesplit,"
+        "$mainMod, O, togglesplit,"
         "$mainMod, E, exec, nautilus"
         "$mainMod SHIFT, B, exec, pkill -SIGUSR1 .waybar-wrapped"
         "$mainMod, C ,exec, hyprpicker -a"
@@ -157,10 +157,10 @@
         ",Print, exec, grimblast --notify --cursor --freeze copy area"
 
         # switch focus
-        "$mainMod, left, movefocus, l"
-        "$mainMod, right, movefocus, r"
-        "$mainMod, up, movefocus, u"
-        "$mainMod, down, movefocus, d"
+        "$mainMod, H, movefocus, l"
+        "$mainMod, L, movefocus, r"
+        "$mainMod, K, movefocus, u"
+        "$mainMod, J, movefocus, d"
 
         # switch workspace
         "$mainMod, 1, workspace, 1"
@@ -188,18 +188,18 @@
         "$mainMod CTRL, c, movetoworkspace, empty"
 
         # window control
-        "$mainMod SHIFT, left, movewindow, l"
-        "$mainMod SHIFT, right, movewindow, r"
-        "$mainMod SHIFT, up, movewindow, u"
-        "$mainMod SHIFT, down, movewindow, d"
-        "$mainMod CTRL, left, resizeactive, -80 0"
-        "$mainMod CTRL, right, resizeactive, 80 0"
-        "$mainMod CTRL, up, resizeactive, 0 -80"
-        "$mainMod CTRL, down, resizeactive, 0 80"
-        "$mainMod ALT, left, moveactive,  -80 0"
-        "$mainMod ALT, right, moveactive, 80 0"
-        "$mainMod ALT, up, moveactive, 0 -80"
-        "$mainMod ALT, down, moveactive, 0 80"
+        "$mainMod SHIFT, H, movewindow, l"
+        "$mainMod SHIFT, L, movewindow, r"
+        "$mainMod SHIFT, K, movewindow, u"
+        "$mainMod SHIFT, J, movewindow, d"
+        "$mainMod CTRL, H, resizeactive, -80 0"
+        "$mainMod CTRL, L, resizeactive, 80 0"
+        "$mainMod CTRL, K, resizeactive, 0 -80"
+        "$mainMod CTRL, J, resizeactive, 0 80"
+        "$mainMod ALT, H, moveactive,  -80 0"
+        "$mainMod ALT, L, moveactive, 80 0"
+        "$mainMod ALT, K, moveactive, 0 -80"
+        "$mainMod ALT, J, moveactive, 0 80"
 
         # media and volume controls
         ",XF86AudioRaiseVolume,exec, pamixer -i 2"

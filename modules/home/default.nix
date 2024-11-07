@@ -4,7 +4,7 @@
     [(import ./audacious/audacious.nix)]       # music player
     ++ [(import ./bat.nix)]                       # better cat command
     ++ [(import ./btop.nix)]                      # resouces monitor 
-    # ++ [(import ./cava.nix)]                      # audio visualizer
+    ++ [(import ./cava.nix)]                      # audio visualizer
     # ++ [(import ./discord.nix)]                   # discord with catppuccin theme
     ++ [(import ./floorp/floorp.nix)]             # firefox based browser
     ++ [(import ./fuzzel.nix)]                    # launcher
@@ -26,5 +26,6 @@
     ++ [(import ./vscodium.nix)]                  # vscode forck
     ++ [(import ./waybar)]                        # status bar
     ++ [(import ./zsh.nix)]                       # shell
+    # ++ [(import ./zellij.nix)]                    # terminal multiplexer
     ++ [(import ./notes.nix)];
 }

@@ -1,6 +1,13 @@
-{ ... }: 
+{ pkgs, ... }: 
 {
   services = {
+    printing.enable = true;
+    printing.drivers = [ pkgs.gutenprint pkgs.samsung-unified-linux-driver ];
+    avahi = {
+      enable = true;
+      nssmdns4 = true;
+      openFirewall = true;
+    };
     blueman.enable = true;
     gvfs.enable = true;
     gnome.gnome-keyring.enable = true;

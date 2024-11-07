@@ -13,6 +13,9 @@
       DISABLE_MAGIC_FUNCTIONS=true
       export "MICRO_TRUECOLOR=1"
     '';
+    # initExtra = ''
+    #
+    # '';
     shellAliases = {
       # record = "wf-recorder --audio=alsa_output.pci-0000_08_00.6.analog-stereo.monitor -f $HOME/Videos/$(date +'%Y%m%d%H%M%S_1.mp4')";
 
@@ -35,7 +38,7 @@
       tree = "eza --icons --tree --group-directories-first";
 
       # Nixos
-      cdnix = "cd ~/nixos-config && codium ~/nixos-config";
+      cdnix = "cd ~/.nixos-flakes/FP-config/";
       ns = "nix-shell --run zsh";
       nix-shell = "nix-shell --run zsh";
       nix-switch = "sudo nixos-rebuild switch --flake ~/nixos-config#${host}";

@@ -2,14 +2,10 @@
   description = "FrostPhoenix's nixos configuration";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nur.url = "github:nix-community/NUR";
   
-    zen-browser.url = "github:MarceColl/zenbrowser-flake";
-
-    # grub2-themes = {
-      # url = "github:vinceliuice/grub2-themes";
-    # };
+    zen-browser.url = "github:ch4og/zen-browser-flake";
 
     hypr-contrib.url = "github:hyprwm/contrib";
     hyprpicker.url = "github:hyprwm/hyprpicker";
@@ -73,7 +69,6 @@
       laptop = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [ (import ./hosts/laptop) ];
-        # grub2-themes.nixosModules.default ];
         specialArgs = { host="laptop"; inherit self inputs username system; };
       };
        vm = nixpkgs.lib.nixosSystem {

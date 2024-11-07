@@ -10,10 +10,10 @@
   hardware.opentabletdriver.enable = true;
   time.hardwareClockInLocalTime = true;
 
-  imports = [
-    ./hardware-configuration.nix
-    ./../../modules/core
-  ];
+  # imports = [
+  #   ./hardware-configuration.nix
+  #   ./../../modules/core
+  # ];
 
   environment.systemPackages = with pkgs; [
     acpi
@@ -55,6 +55,22 @@
   };
 
   # powerManagement.cpuFreqGovernor = "performance";
+
+
+  specialisation = {
+    nvidiaOn.configuration = {
+      system.nixos.tags = [ "nvidiaOn" ];
+      disableNvidia.isNvidiaOn = true;   
+   };
+
+  };
+
+  imports = [
+    ./hardware-configuration.nix
+    ./../../modules/core
+    ./disableNvidia.nix
+  ]; 
+  
 
   boot = {
     kernelModules = ["acpi_call"];

@@ -12,6 +12,9 @@
 # }
 
 { config, pkgs, inputs, ... }: {  # <-- inputs from flake
+  
+  home.sessionVariables.EDITOR = "nvim";
+  
   nixpkgs = { 
     overlays = [
       (final: prev: {
@@ -25,6 +28,7 @@
   ];
   programs.nvchad = {
     enable = true;
+
     extraPackages = with pkgs; [
       nodePackages.bash-language-server
       nixd

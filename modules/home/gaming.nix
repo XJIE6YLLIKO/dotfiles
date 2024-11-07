@@ -13,7 +13,7 @@
     _2048-in-terminal
     vitetris
     #nethack
-    
+ 
     unciv
     starsector
     hase

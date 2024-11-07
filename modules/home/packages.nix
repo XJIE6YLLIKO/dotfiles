@@ -5,6 +5,12 @@ in
 {
   home.packages = (with pkgs; [
     _2048
+
+    fortune
+    neo-cowsay
+
+    hiddify-app                       # vpn
+    ark                               # archivator
     
     audacity
     bitwise                           # cli tool for bit / hex manipulation

@@ -45,7 +45,7 @@ in
         color: #b4befe;
     }
 
-    #tray, #pulseaudio, #network, #cpu, #memory, #disk, #clock, #battery, #custom-notification {
+    #tray, #pulseaudio, #network, #cpu, #memory, #disk, #clock, #battery, #custom-notification, #language {
         font-size: ${custom.font_size};
         color: ${custom.text_color};
     }
@@ -91,6 +91,10 @@ in
     #clock {
         padding-left: 9px;
         padding-right: 15px;
+    }
+
+    #language {
+        padding-right: 20px;
     }
 
     #custom-launcher {

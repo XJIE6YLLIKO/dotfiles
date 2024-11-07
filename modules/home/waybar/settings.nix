@@ -23,6 +23,7 @@
         "pulseaudio" 
         "battery"
         "network"
+        "hyprland/language"
         "custom/notification"
     ];
     clock= {
@@ -112,6 +113,9 @@
         on-click= "fuzzel";
         on-click-right= "wallpaper-picker"; 
         tooltip= "false";
+    };
+    "hyprland/language" = {
+        format = "  {short}";
     };
     "custom/notification" = {
         tooltip = false;
