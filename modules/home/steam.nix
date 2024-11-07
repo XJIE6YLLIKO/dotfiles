@@ -1,16 +1,12 @@
 { pkgs, lib, ... }: 
 {
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true;
-    dedicatedServer.openFirewall = false;
-  };
-  programs.gamemode.enable = true;
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-    "steam"
-    "steam-original"
-    "steam-runtime"
-  ];
+  # home.packages = with pkgs; [steam]; 
+  # programs.gamemode.enable = true;
+  # nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    # "steam"
+    # "steam-original"
+    # "steam-runtime"
+  # ];
   # proton-ge-bin
 
 #   warning: The package proton-ge in nix-gaming has been deprecated as of 2024-03-17.

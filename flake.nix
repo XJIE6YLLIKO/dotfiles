@@ -5,6 +5,12 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nur.url = "github:nix-community/NUR";
   
+    zen-browser.url = "github:MarceColl/zenbrowser-flake";
+
+    # grub2-themes = {
+      # url = "github:vinceliuice/grub2-themes";
+    # };
+
     hypr-contrib.url = "github:hyprwm/contrib";
     hyprpicker.url = "github:hyprwm/hyprpicker";
   
@@ -36,18 +42,25 @@
       flake = false;
     };
 
+    nvchad4nix = {
+      url = "github:nix-community/nix4nvchad";
+      inputs.nixpkgs.follows = "nixpkgs";
+    }; 
+
     spicetify-nix.url = "github:gerg-l/spicetify-nix";
     spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = { nixpkgs, self, ...} @ inputs:
   let
-    username = "frostphoenix";
+    username = "xjie6";
     system = "x86_64-linux";
     pkgs = import nixpkgs {
       inherit system;
       config.allowUnfree = true;
     };
+    extraSpecialArgs = { inherit system; inherit inputs; };  # <- passing inputs to the attribute set for home-manager
+    # specialArgs = { inherit system; inherit inputs; };       # <- passing inputs to the attribute set for NixOS (optional)
     lib = nixpkgs.lib;
   in
   {
@@ -60,7 +73,8 @@
       laptop = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [ (import ./hosts/laptop) ];
-        specialArgs = { host="laptop"; inherit self inputs username ; };
+        # grub2-themes.nixosModules.default ];
+        specialArgs = { host="laptop"; inherit self inputs username system; };
       };
        vm = nixpkgs.lib.nixosSystem {
         inherit system;

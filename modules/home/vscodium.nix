@@ -15,6 +15,8 @@
       # OCaml
       ocamllabs.ocaml-platform
 
+      vscodevim.vim
+
       # Color theme
       catppuccin.catppuccin-vsc
       catppuccin.catppuccin-vsc-icons

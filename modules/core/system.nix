@@ -1,6 +1,6 @@
 { self, pkgs, lib, inputs, ...}: 
 {
-  # imports = [ inputs.nix-gaming.nixosModules.default ];
+  # imports = [ inputs.nix-gaming.nixosModules.default.nix ];
   nix = {
     settings = {
       auto-optimise-store = true;
@@ -16,6 +16,9 @@
   };
   nixpkgs = {
     overlays = [
+      (final: prev: {
+        nvchad = inputs.nvchad4nix.packages."${pkgs.system}".nvchad;
+      })
       inputs.nur.overlay
     ];
   };
@@ -25,7 +28,7 @@
     git
   ];
 
-  time.timeZone = "Europe/Paris";
+  time.timeZone = "Europe/Moscow";
   i18n.defaultLocale = "en_US.UTF-8";
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "24.05";

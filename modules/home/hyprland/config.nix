@@ -1,8 +1,8 @@
 { ... }: 
 {
-  wayland.windowManager.hyprland = {
+ wayland.windowManager.hyprland = {
     settings = {
-      
+
       # autostart
       exec-once = [
         "systemctl --user import-environment &"
@@ -20,21 +20,22 @@
       ];
 
       input = {
-        kb_layout = "us,fr";
-        kb_options ="grp:alt_caps_toggle"; 
+        kb_layout = "us,ru";
+        kb_options ="grp:alt_shift_toggle"; 
         numlock_by_default = true;
         follow_mouse = 1;
         sensitivity = 0;
         touchpad = {
           natural_scroll = true;
         };
+        accel_profile = "flat";
       };
 
       general = {
         "$mainMod" = "SUPER";
         layout = "dwindle";
-        gaps_in = 0;
-        gaps_out = 0;
+        gaps_in = 2;
+        gaps_out = 2;
         border_size = 2;
         "col.active_border" = "rgb(cba6f7) rgb(94e2d5) 45deg";
         "col.inactive_border" = "0x00000000";
@@ -69,7 +70,7 @@
       };
 
       decoration = {
-        rounding = 0;
+        rounding = 5;
         # active_opacity = 0.90;
         # inactive_opacity = 0.90;
         # fullscreen_opacity = 1.0;
@@ -294,7 +295,12 @@
     };
 
     extraConfig = "
-      monitor=,preferred,auto,auto
+      monitor = eDP-1, 1920x1080@60, 1920x0, 1
+      monitor = HDMI-A-1, 1920x1080@165, 0x0, 1
+      monitor=,preferred, 0x0,auto
+
+      workspace = 1, monitor:HDMI-A-1
+      workspace = 2, monitor:eDP-1
 
       xwayland {
         force_zero_scaling = true
