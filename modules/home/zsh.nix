@@ -41,9 +41,9 @@
       cdnix = "cd ~/.nixos-flakes/FP-config/";
       ns = "nix-shell --run zsh";
       nix-shell = "nix-shell --run zsh";
-      nix-switch = "sudo nixos-rebuild switch --flake ~/nixos-config#${host}";
-      nix-switchu = "sudo nixos-rebuild switch --upgrade --flake ~/nixos-config#${host}";
-      nix-flake-update = "sudo nix flake update ~/nixos-config#";
+      nix-switch = "sudo nixos-rebuild switch --flake ~/.nixos-flakes/FP-config#${host}";
+      nix-switchu = "sudo nixos-rebuild switch --upgrade --flake ~/.nixos-flakes/FP-config#${host}";
+      nix-flake-update = "sudo nix flake update ~/.nixos-flakes#";
       nix-clean = "sudo nix-collect-garbage && sudo nix-collect-garbage -d && sudo rm /nix/var/nix/gcroots/auto/* && nix-collect-garbage && nix-collect-garbage -d";
 
       # Git

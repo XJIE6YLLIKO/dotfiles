@@ -14,6 +14,7 @@
 { config, pkgs, inputs, ... }: {  # <-- inputs from flake
   
   home.sessionVariables.EDITOR = "nvim";
+  home.sessionVariables.VISUAL = "nvim";
   
   nixpkgs = { 
     overlays = [
@@ -28,6 +29,45 @@
   ];
   programs.nvchad = {
     enable = true;
+
+    extraPlugins =  '' 
+    return {
+      { 
+        "ngtuonghy/runner-nvchad",
+        config = function()
+          require("runner-nvchad").setup{
+            clear_cmd = true,
+            autoremove = true
+          }
+          end
+      }
+    }
+    '';
+
+    chadrcConfig = ''
+      ---@type ChadrcConfig
+      local M={}
+
+      M.base46 = {
+        theme = "catppuccin",
+        transparency = false,
+        theme_toggle = { "catppuccin", "chadracula-evondev" }
+      }
+
+      M.colorify = {
+        enabled = true,
+        mode = "virtual"
+      }
+
+      return M
+    '';
+
+    extraConfig = ''
+      local map = vim.keymap.set
+      map("n", "<leader>rc", "<cmd>Runner<CR>", { desc = "Run code" })
+      map("v", "<leader>rf", "<cmd>Runnerfast<CR>", { desc = "Run code select" })
+      require("runner-nvchad").setup{}
+    '';
 
     extraPackages = with pkgs; [
       nodePackages.bash-language-server

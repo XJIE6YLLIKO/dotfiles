@@ -6,9 +6,6 @@ in
   home.packages = (with pkgs; [
     _2048
 
-    fortune
-    neo-cowsay
-
     hiddify-app                       # vpn
     ark                               # archivator
     
