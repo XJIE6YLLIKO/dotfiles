@@ -3,6 +3,7 @@
   home.packages = with pkgs; [
     # swww
     swaybg
+    polkit_gnome
     inputs.hypr-contrib.packages.${pkgs.system}.grimblast
     hyprpicker
     grim

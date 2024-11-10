@@ -8,6 +8,7 @@ in
 
     hiddify-app                       # vpn
     ark                               # archivator
+    qbittorrent
     
     audacity
     bitwise                           # cli tool for bit / hex manipulation

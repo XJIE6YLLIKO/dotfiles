@@ -12,9 +12,9 @@ in {
 
     plugins = with pkgs; [
       #Rofi plugins
-      rofi-calc
-      rofi-top
-      rofi-emoji
+      # rofi-calc
+      # rofi-top
+      rofi-emoji-wayland
     ];
     font = "Jetbrains Mono Nerd Font 14";
     terminal = "${pkgs.kitty}/bin/kitty";

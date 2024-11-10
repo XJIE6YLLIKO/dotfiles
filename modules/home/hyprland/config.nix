@@ -1,4 +1,4 @@
-{ ... }: 
+{ pkgs, ... }: 
 {
  wayland.windowManager.hyprland = {
     settings = {
@@ -6,6 +6,7 @@
       # autostart
       exec-once = [
         "systemctl --user import-environment &"
+        "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
         "hash dbus-update-activation-environment 2>/dev/null &"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
         "nm-applet &"
@@ -27,6 +28,7 @@
         sensitivity = 0;
         touchpad = {
           natural_scroll = true;
+          disable_while_typing = false;
         };
         accel_profile = "flat";
       };
@@ -51,6 +53,16 @@
         animate_manual_resizes = false;
         enable_swallow = true;
         focus_on_activate = true;
+      };
+
+      group = {
+        "col.border_active" = "rgb(fab387) rgb(89b4fa) 45deg";
+        "col.border_inactive" = "0x00000000";
+        groupbar = {
+          text_color = "rgb(cdd6f4)";
+          "col.active" = "0x5501e1e2e";
+          "col.inactive" = "0x55181825";
+        };
       };
 
       dwindle = {
@@ -140,6 +152,7 @@
         "$mainMod SHIFT, F, fullscreen, 1"
         "$mainMod, Space, togglefloating,"
         "$mainMod, D, exec, rofi -show drun"
+        "$mainMod, slash, exec, rofi -modi emoji -show emoji"
         "$mainMod SHIFT, D, exec, hyprctl dispatch exec '[workspace 4 silent] discord --enable-features=UseOzonePlatform --ozone-platform=wayland'"
         "$mainMod SHIFT, S, exec, hyprctl dispatch exec '[workspace 5 silent] SoundWireServer'"
         "$mainMod, Escape, exec, swaylock"
@@ -149,9 +162,12 @@
         "$mainMod, O, togglesplit,"
         "$mainMod, E, exec, nautilus"
         "$mainMod SHIFT, B, exec, pkill -SIGUSR1 .waybar-wrapped"
-        "$mainMod, C ,exec, hyprpicker -a"
-        "$mainMod, W,exec, wallpaper-picker"
+        "$mainMod, C, exec, hyprpicker -a"
+        "$mainMod, W, exec, wallpaper-picker"
         "$mainMod SHIFT, W, exec, vm-start"
+        "$mainMod, S, togglegroup"
+        "$mainMod ALT, J, changegroupactive, f"
+        "$mainMod ALT, K, changegroupactive, b"
 
         # screenshot
         "$mainMod, Print, exec, grimblast --notify --cursor --freeze save area ~/Pictures/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
