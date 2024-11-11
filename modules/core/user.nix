@@ -8,9 +8,10 @@
     extraSpecialArgs = { inherit inputs username host system; };
     users.${username} = {
       imports = 
-        if (host == "desktop") then 
-          [ ./../home/default.desktop.nix ] 
-        else [ ./../home ];
+        [ 
+          ./../home 
+          inputs.catppuccin.homeManagerModules.catppuccin
+        ];
       home.username = "${username}";
       home.homeDirectory = "/home/${username}";
       home.stateVersion = "24.11";

@@ -15,6 +15,7 @@
     ++ [(import ./gtk.nix)]                       # gtk theme
     ++ [(import ./hyprland)]                      # window manager
     ++ [(import ./kitty.nix)]                     # terminal
+    ++ [(import ./tmux.nix)]
     ++ [(import ./swaync/swaync.nix)]             # notification deamon
     ++ [(import ./micro.nix)]                     # nano replacement
     ++ [(import ./nvim.nix)]                      # neovim editor
@@ -25,6 +26,7 @@
     ++ [(import ./starship.nix)]                  # shell prompt
     ++ [(import ./swaylock.nix)]                  # lock screen
     ++ [(import ./vscodium.nix)]                  # vscode forck
+    ++ [(import ./qt.nix)]
     ++ [(import ./waybar)]                        # status bar
     ++ [(import ./zsh.nix)]                       # shell
     # ++ [(import ./zellij.nix)]                    # terminal multiplexer

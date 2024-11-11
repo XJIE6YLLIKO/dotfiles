@@ -18,23 +18,25 @@
       name = "Papirus-Dark";
       package = pkgs.catppuccin-papirus-folders.override {
         flavor = "mocha";
-        accent = "lavender";
+        accent = "sky";
       };
     };
-    theme = {
-      name = "Dracula";
-      package = pkgs.dracula-theme;
+
+    catppuccin = {
+      enable = true;
+      accent = "sky";
+      flavor = "mocha";
     };
+    #
+    # theme = {
+    #   name = "Dracula";
+    #   package = pkgs.dracula-theme;
+    # };
     cursorTheme = {
-      name = "Nordzy-cursors";
-      package = pkgs.nordzy-cursor-theme;
-      size = 22;
+      name = "catppuccin-mocha-sky-cursors";
+      package = pkgs.catppuccin-cursors.mochaSky;
+      size = 24;
     };
   };
   
-  home.pointerCursor = {
-    name = "Nordzy-cursors";
-    package = pkgs.nordzy-cursor-theme;
-    size = 22;
-  };
 }

@@ -12,8 +12,8 @@ in {
 
     plugins = with pkgs; [
       #Rofi plugins
-      # rofi-calc
-      # rofi-top
+      rofi-calc
+      rofi-top
       rofi-emoji-wayland
     ];
     font = "Jetbrains Mono Nerd Font 14";

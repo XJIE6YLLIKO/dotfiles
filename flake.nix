@@ -25,6 +25,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    catppuccin.url = "github:catppuccin/nix";
+
     catppuccin-bat = {
       url = "github:catppuccin/bat";
       flake = false;
