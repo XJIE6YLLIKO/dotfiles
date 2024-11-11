@@ -17,7 +17,7 @@
         "waybar &"
         "swaync &"
         "wl-paste --watch cliphist store &"
-        "hyprlock"
+        # "hyprlock"
       ];
 
       input = {
@@ -153,7 +153,7 @@
         "$mainMod, F, fullscreen, 0"
         "$mainMod SHIFT, F, fullscreen, 1"
         "$mainMod, Space, togglefloating,"
-        "$mainMod, D, exec, rofi -show drun"
+        "$mainMod, D, exec, QT_STYLE_OVERRIDE=kvantum rofi -show drun"
         "$mainMod, slash, exec, rofi -modi emoji -show emoji"
         "$mainMod SHIFT, D, exec, hyprctl dispatch exec '[workspace 4 silent] discord --enable-features=UseOzonePlatform --ozone-platform=wayland'"
         "$mainMod SHIFT, S, exec, hyprctl dispatch exec '[workspace 5 silent] SoundWireServer'"
@@ -324,6 +324,6 @@
       xwayland {
         force_zero_scaling = true
       }
-    ";
+      ";
   };
 }

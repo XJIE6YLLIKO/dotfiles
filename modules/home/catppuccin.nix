@@ -13,6 +13,7 @@
 
   home.pointerCursor = {
     name = "catppuccin-mocha-sky-cursors";
-    size = 22;
+    package = pkgs.catppuccin-cursors.mochaSky;
+    size = 24;  
   };
 }
