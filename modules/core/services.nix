@@ -18,14 +18,15 @@
       keyboards.default = {
         ids = [ "*" ];
         settings = {
-          capslock = "overload(control, esc)";
-          esc = "capslock";
+          main = {
+            capslock = "overload(control, esc)";
+          };
         };
       };
     };
   };
   services.logind.extraConfig = ''
-    # don’t shutdown when power button is short-pressed
+# don’t shutdown when power button is short-pressed
     HandlePowerKey=ignore
-  '';
+    '';
 }
