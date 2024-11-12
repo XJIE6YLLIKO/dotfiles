@@ -7,8 +7,8 @@ in
     _2048
 
     hiddify-app                       # vpn
-    ark                               # archivator
     qbittorrent
+    peazip
     
     audacity
     bitwise                           # cli tool for bit / hex manipulation

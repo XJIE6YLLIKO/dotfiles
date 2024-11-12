@@ -12,8 +12,8 @@ in {
 
     plugins = with pkgs; [
       #Rofi plugins
-      rofi-calc
-      rofi-top
+      # rofi-calc
+      # rofi-top
       rofi-emoji-wayland
     ];
     font = "Jetbrains Mono Nerd Font 14";
@@ -27,6 +27,6 @@ in {
   #Plugins that aren't directly included
     rofi-bluetooth
      ];
-  home.file.".config/rofi/colors".source = config.lib.file.mkOutOfStoreSymlink ./Themes/colors;
-  home.file.".config/rofi/Themes".source = config.lib.file.mkOutOfStoreSymlink ./Themes;
+  home.file.".config/rofi/colors" = { source = ./Themes/colors; recursive = true; };
+  home.file.".config/rofi/Themes" = { source = ./Themes; recursive = true; };
 }
