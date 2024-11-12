@@ -13,6 +13,16 @@
     gnome.gnome-keyring.enable = true;
     dbus.enable = true;
     fstrim.enable = true;
+    keyd = {
+      enable = true;
+      keyboards = {
+        ids = [ "*" ];
+        settings = {
+          capslock = "overload(control, esc)";
+          esc = capslock;
+        };
+      };
+    };
   };
   services.logind.extraConfig = ''
     # don’t shutdown when power button is short-pressed

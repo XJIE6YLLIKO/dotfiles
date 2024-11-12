@@ -192,6 +192,7 @@
         "$mainMod, 8, workspace, 8"
         "$mainMod, 9, workspace, 9"
         "$mainMod, 0, workspace, 10"
+        "$mainMod, `, togglespecialworkspace"
 
         # same as above, but switch to the workspace
         "$mainMod SHIFT, 1, movetoworkspacesilent, 1" # movetoworkspacesilent
@@ -204,6 +205,7 @@
         "$mainMod SHIFT, 8, movetoworkspacesilent, 8"
         "$mainMod SHIFT, 9, movetoworkspacesilent, 9"
         "$mainMod SHIFT, 0, movetoworkspacesilent, 10"
+        "$mainMod SHIFT, `, movetoworkspacesilent, special"
         "$mainMod CTRL, c, movetoworkspace, empty"
 
         # window control
@@ -324,6 +326,9 @@
       xwayland {
         force_zero_scaling = true
       }
+
+      envd = QT_STYLE_OVERRIDE,kvantum
+      envd = QT_QPA_PLATFORMTHEME,kvantum
       ";
   };
 }

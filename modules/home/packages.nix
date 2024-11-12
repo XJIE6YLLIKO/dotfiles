@@ -27,7 +27,7 @@ in
     jdk17                             # java
     lazygit
     libreoffice
-    nautilus     # file manager
+    nautilus                          # file manager
     nitch                             # systhem fetch util
     nix-prefetch-github
     pipes                             # terminal screensaver
@@ -40,6 +40,7 @@ in
     valgrind                          # c memory analyzer
     yazi                              # terminal file manager
     yt-dlp-light
+    xcape
     zenity
     winetricks
     wineWowPackages.wayland
