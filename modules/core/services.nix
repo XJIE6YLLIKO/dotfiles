@@ -15,7 +15,7 @@
     fstrim.enable = true;
     keyd = {
       enable = true;
-      keyboards = {
+      keyboards.default = {
         ids = [ "*" ];
         settings = {
           capslock = "overload(control, esc)";
