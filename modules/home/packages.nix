@@ -27,7 +27,7 @@ in
     jdk17                             # java
     lazygit
     libreoffice
-    nautilus                          # file manager
+    xfce.thunar                       # file manager
     nitch                             # systhem fetch util
     nix-prefetch-github
     pipes                             # terminal screensaver
