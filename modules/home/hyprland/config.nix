@@ -163,7 +163,7 @@
         "$mainMod, F2, exec, rofi-bluetooth"
         "$mainMod, P, pseudo,"
         "$mainMod, O, togglesplit,"
-        "$mainMod, E, exec, nautilus"
+        "$mainMod, E, exec, thunar"
         "$mainMod SHIFT, B, exec, pkill -SIGUSR1 .waybar-wrapped"
         "$mainMod, C, exec, hyprpicker -a"
         "$mainMod, W, exec, wallpaper-picker"
