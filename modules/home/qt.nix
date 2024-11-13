@@ -11,7 +11,7 @@
   qt.style.name = "kvantum";
   qt.style.catppuccin = {
     flavor = "mocha";
-    accent = "sky";
+    accent = "blue";
     enable = true;
     apply = true;
   };

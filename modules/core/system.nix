@@ -16,6 +16,7 @@
   };
   nixpkgs = {
     overlays = [
+      inputs.hyprpanel.overlay
       (final: prev: {
         nvchad = inputs.nvchad4nix.packages."${pkgs.system}".nvchad;
       })

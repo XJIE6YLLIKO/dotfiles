@@ -13,6 +13,8 @@
     glib
     wayland
     direnv
+    hyprpanel
+    gpustat
   ];
 
 

@@ -26,7 +26,7 @@
     ++ [(import ./swaylock.nix)]                  # lock screen
     ++ [(import ./vscodium.nix)]                  # vscode forck
     ++ [(import ./qt.nix)]
-    ++ [(import ./waybar)]                        # status bar
+    # ++ [(import ./waybar)]                        # status bar
     ++ [(import ./zsh.nix)]                       # shell
     # ++ [(import ./zellij.nix)]                    # terminal multiplexer
     ++ [(import ./notes.nix)];

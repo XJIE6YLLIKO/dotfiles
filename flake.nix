@@ -19,6 +19,7 @@
       url = "https://github.com/hyprwm/Hyprland";
       submodules = true;
     };
+    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
   
     home-manager = {
       url = "github:nix-community/home-manager";
