@@ -73,7 +73,7 @@
         local map = vim.keymap.set
         map("n", "<leader>rc", "<cmd>Runner<CR>", { desc = "Run code" })
         map("v", "<leader>rf", "<cmd>Runnerfast<CR>", { desc = "Run code select" })
-        vim.g.relativenumber = true
+        vim.opt.relativenumber = true
         require("runner-nvchad").setup{}
 
         local function escape(str)
