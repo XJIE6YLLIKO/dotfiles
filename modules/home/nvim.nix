@@ -20,6 +20,9 @@
     extraPlugins =  '' 
       return {
         { 
+
+          {"subnut/nvim-ghost.nim"},
+
           {
             "kylechui/nvim-surround",
               version = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -28,15 +31,15 @@
                 require("nvim-surround").setup({
                     -- Configuration here, or leave empty to use defaults
                     })
-            end 
+              end 
           },
           {
             'Wansmer/langmapper.nvim',
             lazy = false,
             priority = 1, -- High priority is needed if you will use `autoremap()`
               config = function()
-              require('langmapper').setup({--[[ your config ]]})
-              end,
+                require('langmapper').setup({--[[ your config ]]})
+              end
           },
           {
             "ngtuonghy/runner-nvchad",
@@ -45,7 +48,7 @@
                 clear_cmd = true,
                 autoremove = true
               }
-          end
+            end
           }
         }
       }
@@ -75,6 +78,8 @@
         map("v", "<leader>rf", "<cmd>Runnerfast<CR>", { desc = "Run code select" })
         vim.opt.relativenumber = true
         require("runner-nvchad").setup{}
+
+
 
         local function escape(str)
         -- You need to escape these characters to work correctly

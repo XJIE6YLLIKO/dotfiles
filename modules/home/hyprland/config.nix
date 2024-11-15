@@ -9,7 +9,7 @@
         "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
         "hash dbus-update-activation-environment 2>/dev/null &"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
-        # "nm-applet &"
+        "nm-applet &"
         "poweralertd &"
         "hyprpanel &"
         "wl-clip-persist --clipboard both"
