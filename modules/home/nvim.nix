@@ -21,7 +21,20 @@
       return {
         { 
 
-          {"subnut/nvim-ghost.nim"},
+          {
+            "subnut/nvim-ghost.nvim",
+              name = "nvim_ghost",
+              config = function()
+                vim.api.nvim_create_autocmd('User', {
+                    group = "nvim_ghost_user_autocommands",
+                    pattern = "*reddit.com",
+                    command = 'setfiletype markdown'
+                    })
+            end,
+              keys = {
+                { "<leader>ug", ":call nvim_ghost#enable(0)<cr>", desc = "GhostTextStart", silent = true },
+              },
+          },
 
           {
             "kylechui/nvim-surround",
