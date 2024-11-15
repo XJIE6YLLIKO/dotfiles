@@ -8,11 +8,11 @@
     
     extraConfig = { 
       init.defaultBranch = "main";
-      credential.helper = "store";
-      credential.credentialStore = "gpg";
+      credential.helper = "manager";
+      credential.credentialStore = "secretservice";
     };
   };
 
-    home.packages = with pkgs; [ git-credential-manager pass-wayland ];
+    home.packages = with pkgs; [ git-credential-manager ];
   # home.packages = [ pkgs.gh pkgs.git-lfs ];
 }
