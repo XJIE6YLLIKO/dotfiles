@@ -21,6 +21,13 @@
       return {
         { 
 
+          {"nvim-treesitter/nvim-treesitter-context"},
+
+          {
+            "spywhere/detect-language.nvim",
+              name = "detect-language",
+          },
+
           {
             "subnut/nvim-ghost.nvim",
               name = "nvim_ghost",
@@ -86,15 +93,18 @@
     '';
 
       extraConfig = ''
-        local map = vim.keymap.set
-        map("n", "<leader>rc", "<cmd>Runner<CR>", { desc = "Run code" })
-        map("v", "<leader>rf", "<cmd>Runnerfast<CR>", { desc = "Run code select" })
-        vim.opt.relativenumber = true
-        require("runner-nvchad").setup{}
 
+      local map = vim.keymap.set
+      map("n", "<leader>rc", "<cmd>Runner<CR>", { desc = "Run code" })
+      map("v", "<leader>rf", "<cmd>Runnerfast<CR>", { desc = "Run code select" })
 
+      vim.opt.relativenumber = true
 
-        local function escape(str)
+      require("runner-nvchad").setup{}
+      require("detect-language").setup{}
+      require("nvim-treesitter-context").setup{}
+
+      local function escape(str)
         -- You need to escape these characters to work correctly
         local escape_chars = [[;,."|\]]
         return vim.fn.escape(str, escape_chars)
@@ -112,7 +122,7 @@
             escape(ru) .. ';' .. escape(en),
             }, ',')
 
-        require('langmapper').automapping({ global = true, buffer = true })
+      require('langmapper').automapping({ global = true, buffer = true })
     '';
 
     extraPackages = with pkgs; [
