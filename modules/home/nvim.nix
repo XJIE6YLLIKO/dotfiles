@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }: {  # <-- inputs from flake
+{ pkgs, inputs, ... }: {  # <-- inputs from flake
   
   home.sessionVariables.EDITOR = "nvim";
   home.sessionVariables.VISUAL = "nvim";
@@ -21,11 +21,22 @@
       return {
         { 
 
-          {"nvim-treesitter/nvim-treesitter-context"},
+          {
+            "neovim/nvim-lspconfig",
+              config = function()
+                require "configs.lspconfig"
+                end,
+          },
+
+          {
+            "nvim-treesitter/nvim-treesitter-context",
+          },
 
           {
             "spywhere/detect-language.nvim",
-              name = "detect-language",
+            config = function()
+                require("detect-language").setup({})
+            end
           },
 
           {
@@ -101,8 +112,12 @@
       vim.opt.relativenumber = true
 
       require("runner-nvchad").setup{}
-      require("detect-language").setup{}
-      require("nvim-treesitter-context").setup{}
+      require("detect-language").setup{ disable.new = true, score_list = true, }
+      require("nvim-treesitter.configs").setup{
+        context = {
+          enable = true
+        }
+      }
 
       local function escape(str)
         -- You need to escape these characters to work correctly

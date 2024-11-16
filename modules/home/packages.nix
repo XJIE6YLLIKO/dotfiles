@@ -8,7 +8,8 @@ in
 
     hiddify-app                       # vpn
     qbittorrent
-    peazip
+    keka
+    tldr
     
     audacity
     bitwise                           # cli tool for bit / hex manipulation
