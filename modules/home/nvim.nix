@@ -111,7 +111,7 @@
       map("n", "<leader>ftp", "<cmd>setfiletype python<CR>", { desc = "Set filetype to Python" })
       map("n", "<leader>fth", "<cmd>setfiletype html<CR>", { desc = "Set filetype to HTML" })
       map("n", "<leader>ftc", "<cmd>setfiletype css<CR>", { desc = "Set filetype to CSS" })
-      map("n", "<leader>ftp", "<cmd>setfiletype cpp<CR>", { desc = "Set filetype to C++" })
+      map("n", "<leader>ft=", "<cmd>setfiletype cpp<CR>", { desc = "Set filetype to C++" })
 
       vim.opt.relativenumber = true
 
