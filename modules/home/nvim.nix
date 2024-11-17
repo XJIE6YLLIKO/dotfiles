@@ -108,11 +108,15 @@
       local map = vim.keymap.set
       map("n", "<leader>rc", "<cmd>Runner<CR>", { desc = "Run code" })
       map("v", "<leader>rf", "<cmd>Runnerfast<CR>", { desc = "Run code select" })
+      map("n", "<leader>ftp", "<cmd>setfiletype python", { desc = "Set filetype to Python" })
+      map("n", "<leader>fth", "<cmd>setfiletype html", { desc = "Set filetype to HTML" })
+      map("n", "<leader>ftc", "<cmd>setfiletype css", { desc = "Set filetype to CSS" })
+      map("n", "<leader>ftp", "<cmd>setfiletype cpp", { desc = "Set filetype to C++" })
 
       vim.opt.relativenumber = true
 
       require("runner-nvchad").setup{}
-      require("detect-language").setup{ disable.new = true, score_list = true, }
+      require("detect-language").setup{ disable = {new = true, score_list = true, }}
       require("nvim-treesitter.configs").setup{
         context = {
           enable = true
@@ -144,6 +148,7 @@
       nodePackages.bash-language-server
       nixd
       ast-grep
+      vscode-langservers-extracted
       (python3.withPackages(ps: with ps; [
         python-lsp-server
         flake8

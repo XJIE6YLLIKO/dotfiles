@@ -1,4 +1,4 @@
-{ self, pkgs, lib, inputs, ...}: 
+{ pkgs, inputs, ...}: 
 {
   # imports = [ inputs.nix-gaming.nixosModules.default.nix ];
   nix = {
@@ -33,5 +33,5 @@
   time.timeZone = "Europe/Moscow";
   i18n.defaultLocale = "en_US.UTF-8";
   nixpkgs.config.allowUnfree = true;
-  system.stateVersion = "24.11";
+  system.stateVersion = "25.05";
 }

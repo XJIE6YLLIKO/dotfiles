@@ -41,9 +41,14 @@
       flake = false;
     };
 
+    nvchad-starter = {
+      url = "github:XJIE6YLLIKO/NvChad_luaConfigs";
+      flake = false;
+    };
     nvchad4nix = {
       url = "github:nix-community/nix4nvchad";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nvchad-starter.follows = "nvchad-starter";
     }; 
 
     spicetify-nix.url = "github:gerg-l/spicetify-nix";

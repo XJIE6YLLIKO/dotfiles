@@ -8,7 +8,6 @@ in
 
     hiddify-app                       # vpn
     qbittorrent
-    keka
     tldr
     
     audacity
@@ -29,6 +28,9 @@ in
     lazygit
     libreoffice
     xfce.thunar                       # file manager
+    xfce.thunar-archive-plugin
+    xfce.thunar-volman
+    xfce.thunar-media-tags-plugin
     nitch                             # systhem fetch util
     nix-prefetch-github
     pipes                             # terminal screensaver
