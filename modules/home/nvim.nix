@@ -108,10 +108,10 @@
       local map = vim.keymap.set
       map("n", "<leader>rc", "<cmd>Runner<CR>", { desc = "Run code" })
       map("v", "<leader>rf", "<cmd>Runnerfast<CR>", { desc = "Run code select" })
-      map("n", "<leader>ftp", "<cmd>setfiletype python", { desc = "Set filetype to Python" })
-      map("n", "<leader>fth", "<cmd>setfiletype html", { desc = "Set filetype to HTML" })
-      map("n", "<leader>ftc", "<cmd>setfiletype css", { desc = "Set filetype to CSS" })
-      map("n", "<leader>ftp", "<cmd>setfiletype cpp", { desc = "Set filetype to C++" })
+      map("n", "<leader>ftp", "<cmd>setfiletype python<CR>", { desc = "Set filetype to Python" })
+      map("n", "<leader>fth", "<cmd>setfiletype html<CR>", { desc = "Set filetype to HTML" })
+      map("n", "<leader>ftc", "<cmd>setfiletype css<CR>", { desc = "Set filetype to CSS" })
+      map("n", "<leader>ftp", "<cmd>setfiletype cpp<CR>", { desc = "Set filetype to C++" })
 
       vim.opt.relativenumber = true
 
