@@ -108,10 +108,10 @@
       local map = vim.keymap.set
       map("n", "<leader>rc", "<cmd>Runner<CR>", { desc = "Run code" })
       map("v", "<leader>rf", "<cmd>Runnerfast<CR>", { desc = "Run code select" })
-      map("n", "<leader>ftp", "<cmd>setfiletype python<CR>", { desc = "Set filetype to Python" })
-      map("n", "<leader>fth", "<cmd>setfiletype html<CR>", { desc = "Set filetype to HTML" })
-      map("n", "<leader>ftc", "<cmd>setfiletype css<CR>", { desc = "Set filetype to CSS" })
-      map("n", "<leader>ft=", "<cmd>setfiletype cpp<CR>", { desc = "Set filetype to C++" })
+      map("n", "<leader>ftp", "<cmd>setfiletype python | LspStart<CR>", { desc = "Set filetype to Python" })
+      map("n", "<leader>fth", "<cmd>setfiletype html | LspStart<CR>", { desc = "Set filetype to HTML" })
+      map("n", "<leader>ftc", "<cmd>setfiletype css | LspStart<CR>", { desc = "Set filetype to CSS" })
+      map("n", "<leader>ft=", "<cmd>setfiletype cpp | LspStart<CR>", { desc = "Set filetype to C++" })
 
       vim.opt.relativenumber = true
 
@@ -150,9 +150,9 @@
       ast-grep
       vscode-langservers-extracted
       prettierd
-      pylyzer
       (python3.withPackages(ps: with ps; [
         python-lsp-server
+        basedpyright
         flake8
       ]))
     ];

@@ -1,4 +1,4 @@
-{ pkgs, ... }: 
+{ ... }: 
 {
   programs.kitty = {
     enable = true;
@@ -45,7 +45,7 @@
       "alt+8" = "goto_tab 8";
       "alt+9" = "goto_tab 9";
       "alt+0" = "goto_tab 10";
-      "ctrl+shift+t" = "set_tab_title";
+      "ctrl+shift+r" = "set_tab_title";
 
       ## Unbind
       "ctrl+shift+left" = "no_op";
