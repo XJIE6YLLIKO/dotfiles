@@ -1,8 +1,32 @@
 { pkgs, inputs, ... }: {  # <-- inputs from flake
   
   home.sessionVariables.EDITOR = "nvim";
-  home.sessionVariables.VISUAL = "nvim";
+  home.sessionVariables.VISUAL = "neovide";
   
+  programs.neovide = {
+    enable = true;
+    settings = {
+      fork = false;
+      frame = "full";
+      idle = true;
+      maximized = false;
+      neovim-bin = "/etc/profiles/per-user/xjie6/bin/nvim";
+      no-multigrid = false;
+      srgb = false;
+      tabs = true;
+      theme = "auto";
+      title-hidden = true;
+      vsync = true;
+      wsl = false;
+
+      font = {
+        normal = ["JetBrainsMono Nerd Font Propo"];
+        size = 14.0;
+      };
+    };
+  };
+
+
   nixpkgs = { 
     overlays = [
       (final: prev: {
@@ -104,6 +128,18 @@
     '';
 
       extraConfig = ''
+      if vim.g.neovide then
+
+          -- Put anything you want to happen only in Neovide here
+        vim.g.neovide_hide_mouse_when_typing = true
+        vim.g.neovide_refresh_rate_idle = 5
+        vim.keymap.set('n', '<C-s>', ':w<CR>') -- Save
+        vim.keymap.set('v', '<C-c>', '"+y') -- Copy
+        vim.keymap.set('n', '<C-v>', '"+P') -- Paste normal mode
+        vim.keymap.set('v', '<C-v>', '"+P') -- Paste visual mode
+        vim.keymap.set('c', '<C-v>', '<C-R>+') -- Paste command mode
+        vim.keymap.set('i', '<C-v>', '<ESC>l"+Pli') -- Paste insert mode
+      end
 
       local map = vim.keymap.set
       map("n", "<leader>rc", "<cmd>Runner<CR>", { desc = "Run code" })
