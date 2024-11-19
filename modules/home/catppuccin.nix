@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   catppuccin.flavor = "mocha";
   catppuccin.accent = "sky";

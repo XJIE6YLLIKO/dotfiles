@@ -149,6 +149,8 @@
       nixd
       ast-grep
       vscode-langservers-extracted
+      prettierd
+      pylyzer
       (python3.withPackages(ps: with ps; [
         python-lsp-server
         flake8
