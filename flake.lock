@@ -746,11 +746,11 @@
     "nvchad-starter": {
       "flake": false,
       "locked": {
-        "lastModified": 1732041775,
-        "narHash": "sha256-S6Qa0ZnbsdtTL2k1zp1uwl0wTPy7C0cFAaFPGDceX0E=",
+        "lastModified": 1732130733,
+        "narHash": "sha256-EUPNFHgkI2SUA9mKI9LM09g6MBzCRTvc32G/l3B+Xv0=",
         "owner": "XJIE6YLLIKO",
         "repo": "NvChad_luaConfigs",
-        "rev": "004a03d0e0cf6cc481278f3fcc4c99faa759b81c",
+        "rev": "dd2f03327cbc91005cbf592a5d8a7532f749128e",
         "type": "github"
       },
       "original": {

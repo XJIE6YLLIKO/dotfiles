@@ -1,4 +1,4 @@
-{ hostname, config, pkgs, host, ...}: 
+{ pkgs, ... }: 
 {
   programs.zsh = {
     enable = true;
@@ -9,6 +9,13 @@
       enable = true;
       plugins = [ "git" "fzf" ];
     };
+    plugins = [
+      {
+        name = "vi-mode";
+        src = pkgs.zsh-vi-mode;
+        file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
+      }
+    ];
     initExtraFirst = ''
       DISABLE_MAGIC_FUNCTIONS=true
       export "MICRO_TRUECOLOR=1"
