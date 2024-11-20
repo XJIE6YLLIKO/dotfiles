@@ -1,19 +1,21 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   catppuccin.flavor = "mocha";
-  catppuccin.accent = "sky";
+  catppuccin.accent = "blue";
   catppuccin.enable = true;
   catppuccin = {
     pointerCursor = {
       enable = true;
-      accent = "sky";
+      accent = "dark";
       flavor = "mocha";
     };
   };
 
-  home.pointerCursor = {
-    name = "catppuccin-mocha-sky-cursors";
-    package = pkgs.catppuccin-cursors.mochaSky;
+  home.pointerCursor = lib.mkForce {
+    name = "catppuccin-mocha-dark-cursors";
+    package = pkgs.catppuccin-cursors.mochaDark;
     size = 24;  
+    gtk.enable = true;
+    x11.enable = true;
   };
 }

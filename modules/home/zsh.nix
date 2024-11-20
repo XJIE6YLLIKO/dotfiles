@@ -38,13 +38,19 @@
       tree = "eza --icons --tree --group-directories-first";
 
       # Nixos
+      ns = "nom-shell --run zsh";
+      nix-switch = "nh os switch --hostname laptop";
+      nix-update = "nh os switch --update --hostname laptop";
+      nix-clean = "nh clean all --keep 5";
+      nix-search = "nh search";
+      nix-test = "nh os test --hostname laptop";
       cdnix = "cd ~/.nixos-flakes/FP-config/";
-      ns = "nix-shell --run zsh";
-      nix-shell = "nix-shell --run zsh";
-      nix-switch = "sudo nixos-rebuild switch --flake ~/.nixos-flakes/FP-config#${host}";
-      nix-switchu = "sudo nixos-rebuild switch --upgrade --flake ~/.nixos-flakes/FP-config#${host}";
-      nix-flake-update = "sudo nix flake update";
-      nix-clean = "sudo nix-collect-garbage && sudo nix-collect-garbage -d && sudo rm /nix/var/nix/gcroots/auto/* && nix-collect-garbage && nix-collect-garbage -d";
+      # ns = "nix-shell --run zsh";
+      # nix-shell = "nix-shell --run zsh";
+      # nix-switch = "sudo nixos-rebuild switch --flake ~/.nixos-flakes/FP-config#${host}";
+      # nix-switchu = "sudo nixos-rebuild switch --upgrade --flake ~/.nixos-flakes/FP-config#${host}";
+      # nix-flake-update = "sudo nix flake update";
+      # nix-clean = "sudo nix-collect-garbage && sudo nix-collect-garbage -d && sudo rm /nix/var/nix/gcroots/auto/* && nix-collect-garbage && nix-collect-garbage -d";
 
       # Git
       ga   = "git add";

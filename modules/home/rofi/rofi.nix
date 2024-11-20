@@ -18,7 +18,7 @@ in {
     ];
     font = "Jetbrains Mono Nerd Font 14";
     terminal = "${pkgs.kitty}/bin/kitty";
-    theme = "${style}";
+    # theme = "${style}";
     extraConfig = {
       modes = ["drun" "run" "window" "files" "calc" "top"];
     };

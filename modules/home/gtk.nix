@@ -32,11 +32,11 @@
     #   name = "Dracula";
     #   package = pkgs.dracula-theme;
     # };
-    cursorTheme = {
-      name = "catppuccin-mocha-blue-cursors";
-      package = pkgs.catppuccin-cursors.mochaBlue;
-      size = 24;
-    };
+    # cursorTheme = {
+    #   name = "catppuccin-mocha-dark-cursors";
+    #   package = pkgs.catppuccin-cursors.mochaDark;
+    #   size = 24;
+    # };
   };
   
 }

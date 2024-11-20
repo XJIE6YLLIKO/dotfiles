@@ -14,7 +14,8 @@
         "hyprpanel &"
         "wl-clip-persist --clipboard both"
         "swaybg -m fill -i $(find ~/Pictures/wallpapers/ -maxdepth 1 -type f) &"
-        "hyprctl setcursor catppuccin-mocha-blue-cursors 24 &"
+        "hyprctl setcursor catppuccin-mocha-dark-cursors 24 &"
+        "xsetroot -xcf ${pkgs.catppuccin-cursors.mochaDark}/share/icons/catppuccin-mocha-dark-cursors/cursors/X_cursor 24 &"
         # "waybar &"
         # "swaync &"
         "wl-paste --watch cliphist store &"
@@ -158,7 +159,7 @@
         "$mainMod, code:61, exec, rofi -modi emoji -show emoji"
         # "$mainMod SHIFT, code:40, exec, hyprctl dispatch exec '[workspace 4 silent] discord --enable-features=UseOzonePlatform --ozone-platform=wayland'"
         # "$mainMod SHIFT, code:39, exec, hyprctl dispatch exec '[workspace 5 silent] SoundWireServer'"
-        "$mainMod, Escape, exec, swaylock"
+        "$mainMod, Escape, exec, hyprlock"
         "$mainMod SHIFT, Escape, exec, rofi-power-menu"
         "$mainMod, F2, exec, rofi-bluetooth"
         "$mainMod, code:33, pseudo,"
@@ -329,6 +330,8 @@
 
       envd = QT_STYLE_OVERRIDE,kvantum
       envd = QT_QPA_PLATFORMTHEME,kvantum
+      envd = EDITOR,nvim
+      envd= VISUAL,neovide
       ";
   };
 }

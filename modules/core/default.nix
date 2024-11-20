@@ -2,6 +2,7 @@
 {
   imports =
        [ (import ./bootloader.nix) ]
+    ++ [ (import ./nh.nix) ]
     ++ [ (import ./hardware.nix) ]
     ++ [ (import ./xserver.nix) ]
     ++ [ (import ./network.nix) ]
