@@ -1,7 +1,7 @@
 {config, pkgs,lib, ...}:
 let
 #Declare for style
-  style = "./Themes/Styles/type-1/style-6.rasi";
+  style = "./Themes/Styles/type-1/style-9.rasi";
 in {
   imports = [
     ./scripts.nix

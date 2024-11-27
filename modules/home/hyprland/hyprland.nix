@@ -27,5 +27,6 @@
     };
     # enableNvidiaPatches = false;
     systemd.enable = true;
+    systemd.variables = [ "--all" ];
   };
 }
