@@ -62,6 +62,7 @@
     pkgs = import nixpkgs {
       inherit system;
       config.allowUnfree = true;
+      config.allowUnsupportedSystem = true;
     };
     extraSpecialArgs = { inherit system; inherit inputs; };  # <- passing inputs to the attribute set for home-manager
     # specialArgs = { inherit system; inherit inputs; };       # <- passing inputs to the attribute set for NixOS (optional)

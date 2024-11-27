@@ -2,7 +2,7 @@
 {  
   hardware = {
 
-    nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+    nvidia.package = config.boot.kernelPackages.nvidiaPackages.beta;
     nvidia = {
     modesetting.enable = true;
     # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
@@ -51,9 +51,9 @@
     };
     graphics = {
       enable = true;
-      extraPackages = with pkgs; [
-    
-      ];
+      # extraPackages = with pkgs; [
+      #
+      # ];
     };
   };
   hardware.enableRedistributableFirmware = true;
