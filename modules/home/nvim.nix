@@ -1,7 +1,7 @@
 {pkgs, inputs, ... }: 
 {
-  home.sessionVariables.EDITOR = "nvim";
-  home.sessionVariables.VISUAL = "neovide";
+  # home.sessionVariables.EDITOR = "nvim";
+  # home.sessionVariables.VISUAL = "neovide";
   
   programs.neovide = {
     enable = true;

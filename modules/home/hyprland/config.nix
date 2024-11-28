@@ -330,8 +330,6 @@
 
       envd = QT_STYLE_OVERRIDE,kvantum
       envd = QT_QPA_PLATFORMTHEME,kvantum
-      envd = EDITOR,nvim
-      envd= VISUAL,neovide
       ";
   };
 }

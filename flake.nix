@@ -1,8 +1,8 @@
 {
-  description = "FrostPhoenix's nixos configuration";
+  description = "Shamelessly adapted nixos configuration";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nur.url = "github:nix-community/NUR";
   
     zen-browser.url = "github:ch4og/zen-browser-flake";
@@ -62,7 +62,6 @@
     pkgs = import nixpkgs {
       inherit system;
       config.allowUnfree = true;
-      config.allowUnsupportedSystem = true;
     };
     extraSpecialArgs = { inherit system; inherit inputs; };  # <- passing inputs to the attribute set for home-manager
     # specialArgs = { inherit system; inherit inputs; };       # <- passing inputs to the attribute set for NixOS (optional)
