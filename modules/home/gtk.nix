@@ -2,8 +2,10 @@
 {
   fonts.fontconfig.enable = true;
   home.packages = [
-    pkgs.nerdfonts
-    (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" "Noto" ]; })
+    pkgs.corefonts
+    # pkgs.nerdfonts
+    # (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" "Noto" ]; })
+    pkgs.nerd-fonts.jetbrains-mono
     pkgs.twemoji-color-font
     pkgs.noto-fonts-emoji
   ];

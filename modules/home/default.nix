@@ -20,9 +20,10 @@
     ++ [(import ./swaync/swaync.nix)]             # notification deamon
     ++ [(import ./nvim.nix)]                      # neovim editor
     ++ [(import ./packages.nix)]                  # other packages
+    ++ [(import ./python.nix)]
     # ++ [(import ./retroarch.nix)]
     ++ [(import ./scripts/scripts.nix)]           # personal scripts
-    # ++ [(import ./spicetify.nix)]                 # spotify client
+    ++ [(import ./spicetify.nix)]                 # spotify client
     ++ [(import ./starship.nix)]                  # shell prompt
     ++ [(import ./swaylock.nix)]                  # lock screen
     ++ [(import ./qt.nix)]

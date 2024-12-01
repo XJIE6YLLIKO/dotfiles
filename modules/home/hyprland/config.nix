@@ -147,6 +147,7 @@
         "$mainMod, F1, exec, show-keybinds"
 
         # keybindings
+        "$mainMod, code:51, exec, emacsclient --eval '(emacs-everywhere)'"
         "$mainMod, Return, exec, kitty"
         "ALT, Return, exec, kitty --title float_kitty"
         "$mainMod SHIFT, Return, exec, kitty --start-as=fullscreen -o 'font_size=16'"

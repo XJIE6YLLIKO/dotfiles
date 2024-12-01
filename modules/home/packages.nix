@@ -52,9 +52,6 @@ in
     gcc
     gnumake
 
-    # Python
-    python3
-
     bleachbit                         # cache cleaner
     cmatrix
     gparted                           # partition manager
@@ -62,7 +59,7 @@ in
     imv                               # image viewer
     killall
     libnotify
-	  man-pages					            	  # extra man pages
+    man-pages                         # extra man pages
     mpv                               # video player
     ncdu                              # disk space
     openssl

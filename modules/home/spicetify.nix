@@ -1,12 +1,12 @@
-{ pkgs, lib, inputs, ...}: 
+{ pkgs, inputs, ...}:
 let
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
 in 
 {
-  nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (lib.getName pkg) [
-      "spotify"
-    ];
+  # nixpkgs.config.allowUnfreePredicate = pkg:
+  #   builtins.elem (lib.getName pkg) [
+  #     "spotify"
+  #   ];
 
   imports = [inputs.spicetify-nix.homeManagerModules.default];
 
@@ -16,6 +16,11 @@ in
        adblock
        hidePodcasts
        shuffle # shuffle+ (special characters are sanitized out of extension names)
+       keyboardShortcut
+       autoVolume
+       history
+       betterGenres
+       skipAfterTimestamp
      ];
      theme = spicePkgs.themes.catppuccin;
      colorScheme = "mocha";
