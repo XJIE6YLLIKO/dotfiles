@@ -14,8 +14,8 @@
         "poweralertd &"
         "wl-clip-persist --clipboard both"
         "swaybg -m fill -i $(find ~/Pictures/wallpapers/ -maxdepth 1 -type f) &"
-        "hyprctl setcursor catppuccin-mocha-dark-cursors 24 &"
-        "xsetroot -xcf ${pkgs.catppuccin-cursors.mochaDark}/share/icons/catppuccin-mocha-dark-cursors/cursors/X_cursor 24 &"
+        # "hyprctl setcursor catppuccin-mocha-dark-cursors 24 &"
+        # "xsetroot -xcf ${pkgs.catppuccin-cursors.mochaDark}/share/icons/catppuccin-mocha-dark-cursors/cursors/X_cursor 24 &"
         # "waybar &"
         # "swaync &"
         "wl-paste --watch cliphist store &"
@@ -41,8 +41,8 @@
         gaps_in = 2;
         gaps_out = 2;
         border_size = 2;
-        "col.active_border" = "rgb(cba6f7) rgb(94e2d5) 45deg";
-        "col.inactive_border" = "0x00000000";
+        # "col.active_border" = "rgb(cba6f7) rgb(94e2d5) 45deg";
+        # "col.inactive_border" = "0x00000000";
         border_part_of_window = false;
         no_border_on_floating = false;
       };
@@ -57,15 +57,15 @@
         focus_on_activate = true;
       };
 
-      group = {
-        "col.border_active" = "rgb(fab387) rgb(89b4fa) 45deg";
-        "col.border_inactive" = "0x00000000";
-        groupbar = {
-          text_color = "rgb(cdd6f4)";
-          "col.active" = "0x5501e1e2e";
-          "col.inactive" = "0x55181825";
-        };
-      };
+      # group = {
+      #   "col.border_active" = "rgb(fab387) rgb(89b4fa) 45deg";
+      #   "col.border_inactive" = "0x00000000";
+      #   groupbar = {
+      #     text_color = "rgb(cdd6f4)";
+      #     "col.active" = "0x5501e1e2e";
+      #     "col.inactive" = "0x55181825";
+      #   };
+      # };
 
       dwindle = {
         # no_gaps_when_only = true;
@@ -103,15 +103,15 @@
           xray = true;
         };
 
-        shadow = {
-          enabled = true;
+        # shadow = {
+        #   enabled = true;
 
-          ignore_window = true;
-          offset = "0 2";
-          range = 20;
-          render_power = 3;
-          color = "rgba(00000055)";
-        };
+        #   ignore_window = true;
+        #   offset = "0 2";
+        #   range = 20;
+        #   render_power = 3;
+        #   color = "rgba(00000055)";
+        # };
       };
 
       animations = {

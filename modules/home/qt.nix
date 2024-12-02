@@ -7,14 +7,14 @@
 # in
 {
   qt.enable = true;
-  qt.platformTheme.name = "kvantum";
-  qt.style.name = "kvantum";
-  qt.style.catppuccin = {
-    flavor = "mocha";
-    accent = "blue";
-    enable = true;
-    apply = true;
-  };
+  # qt.platformTheme.name = "kvantum";
+  # qt.style.name = "kvantum";
+  # qt.style.catppuccin = {
+  #   flavor = "mocha";
+  #   accent = "blue";
+  #   enable = true;
+  #   apply = true;
+  # };
 
   home.packages = with pkgs; [
     libsForQt5.qtstyleplugin-kvantum

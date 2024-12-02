@@ -16,7 +16,7 @@ in {
       # rofi-top
       rofi-emoji-wayland
     ];
-    font = "Jetbrains Mono Nerd Font 14";
+    # font = "Jetbrains Mono Nerd Font 14";
     terminal = "${pkgs.kitty}/bin/kitty";
     theme = lib.mkForce "${style}";
     extraConfig = {

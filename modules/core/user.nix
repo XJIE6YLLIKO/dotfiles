@@ -11,6 +11,7 @@
         [ 
           ./../home 
           inputs.catppuccin.homeManagerModules.catppuccin
+          inputs.stylix.homeManagerModules.stylix
         ];
       home.username = "${username}";
       home.homeDirectory = "/home/${username}";

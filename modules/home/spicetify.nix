@@ -22,7 +22,7 @@ in
        betterGenres
        skipAfterTimestamp
      ];
-     theme = spicePkgs.themes.catppuccin;
-     colorScheme = "mocha";
+     # theme = spicePkgs.themes.catppuccin;
+     # colorScheme = "mocha";
   };
 }

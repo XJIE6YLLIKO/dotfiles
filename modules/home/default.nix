@@ -5,11 +5,10 @@
     ++ [(import ./bat.nix)]                       # better cat command
     ++ [(import ./browser.nix)]
     ++ [(import ./btop.nix)]                      # resouces monitor 
-    ++ [(import ./catppuccin.nix)]
+    # ++ [(import ./catppuccin.nix)]
     # ++ [(import ./cava.nix)]                      # audio visualizer
     ++ [(import ./emacs.nix)]
     # ++ [(import ./discord.nix)]                   # discord with catppuccin theme
-    ++ [(import ./fuzzel.nix)]                    # launcher
     ++ [(import ./rofi/rofi.nix)]
     ++ [(import ./gaming.nix)]                    # packages related to gaming
     ++ [(import ./steam.nix)]
@@ -25,7 +24,8 @@
     ++ [(import ./scripts/scripts.nix)]           # personal scripts
     ++ [(import ./spicetify.nix)]                 # spotify client
     ++ [(import ./starship.nix)]                  # shell prompt
-    ++ [(import ./swaylock.nix)]                  # lock screen
+    ++ [(import ./stylix/stylix.nix)]
+    # ++ [(import ./swaylock.nix)]                  # lock screen
     ++ [(import ./qt.nix)]
     # ++ [(import ./waybar)]                        # status bar
     ++ [(import ./youtube.nix)]

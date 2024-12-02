@@ -51,8 +51,9 @@
       inputs.nvchad-starter.follows = "nvchad-starter";
     };
 
+    oxocarbon-folders.url = "github:BattleCh1cken/oxocarbon-papirus-folders";
     fix-python.url = "github:GuillaumeDesforges/fix-python";
-
+    stylix.url = "github:danth/stylix";
     spicetify-nix.url = "github:gerg-l/spicetify-nix";
     spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
   };

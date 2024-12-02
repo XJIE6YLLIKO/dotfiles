@@ -1,18 +1,18 @@
-{ ... }: 
+{ lib, ... }:
 {
   programs.kitty = {
     enable = true;
 
-    themeFile = "Catppuccin-Mocha";
+    # themeFile = "Catppuccin-Mocha";
     
-    font = {
+    font = lib.mkForce {
       name = "JetBrainsMono Nerd Font";
       size = 13;
     };
 
     settings = {
       confirm_os_window_close = 0;
-      background_opacity = "0.55";  
+      # background_opacity = "0.55";
       dynamic_background_opacity = "yes";
       window_padding_width = 10;
       scrollback_lines = 10000;

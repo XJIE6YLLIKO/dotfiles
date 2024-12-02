@@ -6,29 +6,30 @@
     # pkgs.nerdfonts
     # (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" "Noto" ]; })
     pkgs.nerd-fonts.jetbrains-mono
+    pkgs.nerd-fonts.symbols-only
     pkgs.twemoji-color-font
     pkgs.noto-fonts-emoji
   ];
 
   gtk = {
     enable = true;
-    font = {
-      name = "JetBrainsMono Nerd Font";
-      size = 11;
-    };
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.catppuccin-papirus-folders.override {
-        flavor = "mocha";
-        accent = "blue";
-      };
-    };
+    # font = {
+    #   name = "JetBrainsMono Nerd Font";
+    #   size = 11;
+    # };
+    # iconTheme = {
+    #   name = "Papirus-Dark";
+    #   package = pkgs.catppuccin-papirus-folders.override {
+    #     flavor = "mocha";
+    #     accent = "blue";
+    #   };
+    # };
 
-    catppuccin = {
-      enable = true;
-      accent = "blue";
-      flavor = "mocha";
-    };
+    # catppuccin = {
+    #   enable = true;
+    #   accent = "blue";
+    #   flavor = "mocha";
+    # };
     #
     # theme = {
     #   name = "Dracula";
