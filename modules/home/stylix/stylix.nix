@@ -1,4 +1,9 @@
-{ system, inputs, pkgs, ... }:
+{
+  system,
+  inputs,
+  pkgs,
+  ...
+}:
 {
   stylix = {
     enable = true;
@@ -52,7 +57,7 @@
     };
     iconTheme = {
       enable = true;
-      package = inputs.oxocarbon-folders.packages.${system}.oxocarbon-folders;
+      package = pkgs.papirus-icon-theme.override { color = "teal"; };
       dark = "Papirus-Dark";
       light = "Papirus-Light";
     };

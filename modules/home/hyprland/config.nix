@@ -1,6 +1,6 @@
-{ pkgs, ... }: 
+{ pkgs, ... }:
 {
- wayland.windowManager.hyprland = {
+  wayland.windowManager.hyprland = {
     settings = {
 
       # autostart
@@ -24,7 +24,7 @@
 
       input = {
         kb_layout = "us,ru";
-        kb_options ="grp:alt_shift_toggle"; 
+        kb_options = "grp:alt_shift_toggle";
         numlock_by_default = true;
         follow_mouse = 1;
         sensitivity = 0;

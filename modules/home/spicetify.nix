@@ -1,28 +1,33 @@
-{ pkgs, inputs, ...}:
+{
+  pkgs,
+  inputs,
+  lib,
+  ...
+}:
 let
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
-in 
+in
 {
   # nixpkgs.config.allowUnfreePredicate = pkg:
   #   builtins.elem (lib.getName pkg) [
   #     "spotify"
   #   ];
 
-  imports = [inputs.spicetify-nix.homeManagerModules.default];
+  imports = [ inputs.spicetify-nix.homeManagerModules.default ];
 
   programs.spicetify = {
     enable = true;
-     enabledExtensions = with spicePkgs.extensions; [
-       adblock
-       hidePodcasts
-       shuffle # shuffle+ (special characters are sanitized out of extension names)
-       keyboardShortcut
-       autoVolume
-       history
-       betterGenres
-       skipAfterTimestamp
-     ];
-     # theme = spicePkgs.themes.catppuccin;
-     # colorScheme = "mocha";
+    enabledExtensions = with spicePkgs.extensions; [
+      adblock
+      hidePodcasts
+      shuffle # shuffle+ (special characters are sanitized out of extension names)
+      keyboardShortcut
+      autoVolume
+      history
+      betterGenres
+      skipAfterTimestamp
+    ];
+    theme = lib.mkForce spicePkgs.themes.text;
+    # colorScheme = "mocha";
   };
 }
