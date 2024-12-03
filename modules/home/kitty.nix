@@ -3,8 +3,7 @@
   programs.kitty = {
     enable = true;
 
-    # themeFile = "Catppuccin-Mocha";
-    
+
     font = lib.mkForce {
       name = "JetBrainsMono Nerd Font";
       size = 13;
@@ -12,13 +11,12 @@
 
     settings = {
       confirm_os_window_close = 0;
-      # background_opacity = "0.55";
       dynamic_background_opacity = "yes";
       window_padding_width = 10;
       scrollback_lines = 10000;
       enable_audio_bell = false;
       mouse_hide_wait = 60;
-      
+
       ## Tabs
       tab_title_template = "{index}:{title}";
       active_tab_font_style = "normal";
@@ -31,9 +29,10 @@
       inactive_tab_background = "#313244";
 
       enabled_layouts = "Grid, Fat, Horizontal";
+      cursor_trail = 3;
     };
 
-    keybindings = {  
+    keybindings = {
       ## Tabs
       "alt+1" = "goto_tab 1";
       "alt+2" = "goto_tab 2";

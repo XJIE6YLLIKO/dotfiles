@@ -1,7 +1,12 @@
-{ pkgs, config, inputs, ... }: 
+{
+  pkgs,
+  config,
+  inputs,
+  ...
+}:
 {
 
-  home.packages = with pkgs;[
+  home.packages = with pkgs; [
     ## Utils
     gamemode
     gamescope
@@ -11,9 +16,8 @@
 
     ## Cli games
     _2048-in-terminal
-    vitetris
     #nethack
- 
+
     unciv
     starsector
     hase
