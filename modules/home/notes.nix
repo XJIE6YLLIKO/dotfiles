@@ -1,6 +1,6 @@
-{ pkgs, config, inputs, ... }:
+{ pkgs, ... }:
 {
-  home.packages = with pkgs;[
-  xournalpp
+  home.packages = with pkgs; [
+    xournalpp
   ];
 }

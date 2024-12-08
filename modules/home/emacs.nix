@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    nodejs-slim_23
+    nodejs
     #nix lang
     nixd
     nixfmt-rfc-style

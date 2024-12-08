@@ -1,4 +1,8 @@
-{ pkgs, config, system, inputs,... }: 
+{
+  pkgs,
+  config,
+  ...
+}:
 {
   # specialArgs = { inherit system; inherit inputs; };
 
@@ -8,7 +12,6 @@
   };
 
   hardware.opentabletdriver.enable = true;
-  time.hardwareClockInLocalTime = true;
 
   # imports = [
   #   ./hardware-configuration.nix
@@ -21,8 +24,8 @@
     cpupower-gui
     powertop
   ];
-  
-  services = {    
+
+  services = {
     thermald.enable = true;
     cpupower-gui.enable = true;
     # power-profiles-daemon.enable = true;
@@ -30,7 +33,7 @@
     # fprintd.package = pkgs.fprintd-tod;
     # fprintd.tod.enable = true;
     # fprintd.tod.driver = pkgs.libfprint-2-tod1-elan;
- 
+
     upower = {
       enable = true;
       percentageLow = 20;
@@ -56,12 +59,11 @@
 
   # powerManagement.cpuFreqGovernor = "performance";
 
-
   specialisation = {
     nvidiaOn.configuration = {
       system.nixos.tags = [ "nvidiaOn" ];
-      disableNvidia.isNvidiaOn = true;   
-   };
+      disableNvidia.isNvidiaOn = true;
+    };
 
   };
 
@@ -69,17 +71,17 @@
     ./hardware-configuration.nix
     ./../../modules/core
     ./disableNvidia.nix
-  ]; 
-  
+  ];
 
   boot = {
-    kernelModules = ["acpi_call"];
-    extraModulePackages = with config.boot.kernelPackages;
+    kernelModules = [ "acpi_call" ];
+    extraModulePackages =
+      with config.boot.kernelPackages;
       [
         acpi_call
         cpupower
       ]
-      ++ [pkgs.cpupower-gui];
+      ++ [ pkgs.cpupower-gui ];
   };
   home-manager.backupFileExtension = "backup3";
 }
